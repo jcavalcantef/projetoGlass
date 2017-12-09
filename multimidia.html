@@ -1,0 +1,68 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+	<meta charset="utf-8">
+	<meta http-equiv="X-UA-Compatible" content="IE=edge">
+	<title></title>
+	<link rel="stylesheet" type="text/css" href="css/estilo.css">
+	<link rel="stylesheet" type="text/css" href="css/media.css">
+	<script language="javascript" src="javascript/funcoes.js"></script>
+</head>
+<body>
+	<div id="interface">
+		<header id="cabecalho">
+			<hgroup>
+				<h1>Google Glass</h1>
+				<h2>A revolução do Google está chegando</h2>
+			</hgroup>
+
+			<img id="glass" src="imagens/multimidia.png">
+
+			<nav id="menu">
+				<h1>Menu Principal</h1>
+				<ul>
+					<li onmouseover="mudafoto('imagens/home.png')" onmouseout="mudafoto('imagens/multimidia.png')"> <a href="index.html"> Home </a>  </li>
+					<li onmouseover="mudafoto('imagens/especificacoes.png')" onmouseout="mudafoto('imagens/multimidia.png')" ><a href="specs.html"> Especificações </a></li>
+					<li onmouseover="mudafoto('imagens/fotos.png')" onmouseout="mudafoto('imagens/multimidia.png')" > <a href="fotos.html"> Fotos </a></li>
+					<li onmouseover="mudafoto('imagens/multimidia.png')" onmouseout="mudafoto('imagens/multimidia.png')" > <a href="multimidia.html"> Multimídia </a></li>
+					<li onmouseover="mudafoto('imagens/contato.png')" onmouseout="mudafoto('imagens/multimidia.png')" ><a href="fale-conosco.html"> Fale conosco </a></li>
+				</ul>
+			</nav>
+		</header>
+
+		<section id="corpo-full">
+			<article id="noticia-principal">
+				<header id="cabecalho-artigo">
+					<hgroup>
+						<h3> Glass > Multimídia </h3>
+						<h1> Sons e Vídeos </h1>
+						<h2>Jonathas Cavalcante</h2>
+						<h3 id="direita"> Atualizado em 07/Abril/2015 </h3>
+					</hgroup>
+				</header>
+
+				<div id="tv-radio">
+					<audio controls="controls" id="musica">
+						<source src="media/lovers.mp3" type="audio/mpeg">
+							Your browser does not support the audio element.
+					</audio>
+					<video id="filme" controls="controls" poster="imagens/video-mini03.jpg" >
+						<source src="media/getting-started.mp4" type="video/mp4">
+							desculpe mais o video não pode ser exibido
+					</video>
+
+				</div>
+				<iframe id="vem" width="760" height="315" src="https://www.youtube.com/embed/fG0mYNoBuf8" frameborder="0" allowfullscreen></iframe>
+			</article>
+		</section>
+
+
+		<footer id="rodape">
+			<p>
+				<h4>Copyright &copy; 2015 - by Jonathas Cavalcante</h4>
+				<h4 id="h4"><a href="https://www.facebook.com/jonathas.cavalcante" target="_blank"> Facebook </a> | Twitter</h4>
+			</p>
+		</footer>
+	</div>
+</body>
+</html>

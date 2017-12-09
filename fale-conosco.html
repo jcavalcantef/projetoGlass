@@ -1,0 +1,118 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <title></title>
+    <link rel="stylesheet" type="text/css" href="css/estilo.css">
+    <link rel="stylesheet" type="text/css" href="css/form.css">
+    <script language="javascript" src="javascript/funcoes.js"></script>
+    <script>
+        function calc_total(){
+            var qtd = parseInt(document.getElementById('cQtd').value);
+            total = qtd * 1500;
+            document.getElementById('cTot').value = total;
+        }
+    </script>
+</head>
+<body>
+    <div id="interface">
+        <header id="cabecalho">
+            <hgroup>
+                <h1>Google Glass</h1>
+                <h2>A revolução do Google está chegando</h2>
+            </hgroup>
+
+            <img id="glass" src="imagens/contato.png">
+
+            <nav id="menu">
+                <h1>Menu Principal</h1>
+                <ul>
+                    <li onmouseover="mudafoto('imagens/home.png')" onmouseout="mudafoto('imagens/contato.png')"> <a href="index.html"> Home </a>  </li>
+                    <li onmouseover="mudafoto('imagens/especificacoes.png')" onmouseout="mudafoto('imagens/contato.png')" ><a href="specs.html"> Especificações </a></li>
+                    <li onmouseover="mudafoto('imagens/fotos.png')" onmouseout="mudafoto('imagens/contato.png')" > <a href="fotos.html"> Fotos </a></li>
+                    <li onmouseover="mudafoto('imagens/multimidia.png')" onmouseout="mudafoto('imagens/contato.png')" > <a href="multimidia.html"> Multimídia </a></li>
+                    <li onmouseover="mudafoto('imagens/contato.png')" onmouseout="mudafoto('imagens/contato.png')" ><a href="fale-conosco.html"> Fale conosco </a></li>
+                </ul>
+            </nav>
+        </header>
+        <section id="corpo-full">
+            <article id="noticia-principal">
+                <header id="cabecalho-artigo">
+                    <hgroup>
+                        <h3>Fale Conosco > Contato</h3>
+                        <h1>Formulário de Contato</h1>
+                        <h2>Jonathas Cavalcante</h2>
+                        <h3 id="direita"> Atualizado em 07/Abril/2015 </h3>
+                    </hgroup>
+                </header>
+            </article>
+        </section>
+
+        <form method="post" action="mailto:jbc@icomp.ufam.edu.br-nao vai funcionar =\" oninput="calc_total();" >
+            <fieldset id="usuario"> <legend> Identificação do Usuário </legend>
+                <p> <label for="cNome">Nome:</label> <input type="text" name="tNome" id="cNome" size="30" maxlength="30" placeholder="Name full" required/> </p>
+                <p><label for="cSenha">Senha:</label> <input type="password" name="tSenha" id="cSenha" size="8" maxlength="8" placeholder="PassWord" required/> </p>
+                <p> <label for="cMail">E-mail:</label> <input type="email" id="cMail" size="20" maxlength="40" required/> </p>
+                <fieldset id="sexo"><legend>Sexo:</legend>
+                   <input type="radio" name="tSexo" id="cMasc" checked /> <label for="cMasc"> Masculino </label> <br>
+                   <input type="radio" name="tSexo" id="cFem"/> <label for="cFem"> Feminino </label>
+                </fieldset>
+                <p>Data de Nascimento: <input type="date" name="tNasc" id="cNasc" /> </p>
+            </fieldset>
+
+            <fieldset id="endereco"> <legend> Endereço do Usuário </legend>
+                <p><label for="cRua">Logradouro:</label>  <input type="text" name="tLograd" id="cRua" size="30" maxlength="80" placeholder="Rua,av,trave,..."/></p>
+                <p><label for="cNum">Número:</label> <input type="number" name="tNum" id="cNum" min="0" max="9999"/> </p>
+                <p><label for="cEstado">Estado:</label>
+                    <select name="tEstado" id="cEStado">
+
+                        <optgroup label="Região Norte">
+                            <option value="AM"> Amazonas </option>
+                            <option value="RR"> Roraima </option>
+                            <option value="AC"> Acre </option>
+                        </optgroup>
+
+                        <optgroup label="Região Sul">
+                            <option value="RJ"> Rio de janeiro </option>
+                            <option value="SP"> São paulo </option>
+                        </optgroup>
+
+                    </select>
+
+                    <p>Cidade: <input type="text" name="tCidade" id="cCidade" maxlength="40" list="cidades" placeholder="Sua Cidade" /></p>
+                    <datalist id="cidades">
+                        <option value="Rio de Janeiro"></option>
+                        <option value="Nova Iguaçu"></option>
+                        <option value="Belford"></option>
+                        <option value="Manaus"></option>
+                        <option value="Manacapuru"></option>
+                    </datalist>
+
+                </fieldset>
+
+                <fieldset id="mensagem"> <legend>Mensagem do Usuário </legend>
+                    <p>Grau de Urgência: min<input type="range" name="grau" id="urgencia" min="0" max="10" step="2"/> max </p>
+                    <p>Mensagem:
+                    <textarea name="tMsg" id="cMsg" cols="50" rows="5" placeholder="Deixe aqui sua Mensagem" ></textarea> </p>
+                </fieldset>
+
+                <fieldset id="pedido"> <legend> Quero um Google Glass </legend>
+                   <p><input type="checkbox" name="tPed" id="cPed"  checked/> Gostaria de adquirir um Google Glass quando disponível</p>
+                    <p>Cor:  <input type="color" name="tCor" id="cCor" value="#0000FF" /> </p>
+                    <p>Quantidade: <input type="number" name="tQtd" id="cQtd" min="0" max="10" value="0" /> </p>
+                    <p>Preço Total: R$ <input type="text" name="tTot" id="cTot" placeholder="Total a Pagar" readonly/> </p>
+                </fieldset>
+
+                <input type="image" name="tEnviar" src="imagens/botao-enviar.png" />
+            </form>
+
+            <footer id="rodape">
+                <p>
+                    <h4>Copyright &copy; 2015 - by Jonathas Cavalcante</h4>
+                    <h4 id="h4"><a href="https://www.facebook.com/jonathas.cavalcante" target="_blank"> Facebook </a> | Twitter</h4>  
+                </p>
+            </footer>
+        </div>
+    </body>
+    </html>

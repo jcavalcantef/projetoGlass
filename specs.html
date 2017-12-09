@@ -1,0 +1,71 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+	<meta charset="utf-8">
+	<meta http-equiv="X-UA-Compatible" content="IE=edge">
+	<title></title>
+	<link rel="stylesheet" type="text/css" href="css/estilo.css">
+	<link rel="stylesheet" type="text/css" href="css/specs.css">
+	<script language="javascript" src="javascript/funcoes.js"></script>
+</head>
+<body id="teste">
+	<div id="interface">
+		<header id="cabecalho">
+			<hgroup>
+				<h1>Google Glass</h1>
+				<h2>A revolução do Google está chegando</h2>
+			</hgroup>
+
+			<img id="glass" src="imagens/glass-oculos-preto-peq.png">
+
+			<nav id="menu">
+				<h1>Menu Principal</h1>
+				<ul>
+					<li onmouseover="mudafoto('imagens/home.png')" onmouseout="mudafoto('imagens/especificacoes.png')"> <a href="index.html"> Home </a>  </li>
+					<li onmouseover="mudafoto('imagens/especificacoes.png')" onmouseout="mudafoto('imagens/especificacoes.png')" ><a href="specs.html"> Especificações </a></li>
+					<li onmouseover="mudafoto('imagens/fotos.png')" onmouseout="mudafoto('imagens/especificacoes.png')" > <a href="fotos.html"> Fotos </a></li>
+					<li onmouseover="mudafoto('imagens/multimidia.png')" onmouseout="mudafoto('imagens/especificacoes.png')" > <a href="multimidia.html"> Multimídia </a></li>
+					<li onmouseover="mudafoto('imagens/contato.png')" onmouseout="mudafoto('imagens/especificacoes.png')" ><a href="fale-conosco.html"> Fale conosco </a></li>
+				</ul>
+			</nav>
+
+		</header>
+		<section id="corpo-full">
+			<article id="noticia-principal">
+				<header id="cabecalho-artigo">
+					<hgroup>
+						<h3> Glass > Especificações </h3>
+						<h1> Raio-X no Google Glass </h1>
+						<h2>Jonathas Cavalcante</h2>
+						<h3 id="direita"> Atualizado em 07/Abril/2015 </h3>
+					</hgroup>
+				</header>
+			</article>
+			<p>
+				Clique em qualquer área destacada da imagem para ter mais informações sobre os recursos do Google Glass. Qualquer ponto vermelho vai te levar a um lugar cheio de novas informações.
+			</p>
+
+			<section id="conteudo">
+				<img src="imagens/glass-esquema-marcado(2).jpg" alt="Oculos do google glass" usemap="meumapa">
+				<map name="meumapa">
+					<area shape="rect" coords="182,218,264,241" href="google-glass.html#tela" target="janela" alt="">
+					<area shape="circle" coords="157,244,12" href="google-glass.html#camera" target="janela" alt="">
+					<area shape="circle" coords="73,52,12" href="google-glass.html#gadgets" target="janela" alt="">
+					<area shape="poly" coords="27,147,82,216,84,250,27,168" href="google-glass.html#sensores" target="janela" alt="">
+				</map>
+
+				<iframe src="google-glass.html" name="janela" id="frame-spec" frameborder="0" ></iframe>
+			</section>
+
+		</section>
+
+
+		<footer id="rodape">
+			<p>
+				<h4>Copyright &copy; 2015 - by Jonathas Cavalcante</h4>
+				<h4 id="h4"><a href="https://www.facebook.com/jonathas.cavalcante" target="_blank"> Facebook </a> | Twitter</h4>  
+			</p>
+		</footer>
+	</div>
+</body>
+</html>

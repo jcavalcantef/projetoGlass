@@ -1,0 +1,223 @@
+@charset "UTF-8";
+@import url(http://fonts.googleapis.com/css?family=Titillium+Web:200italic);
+
+@font-face{
+	font-family: 'fontelogo';
+	src: url(../fonts/bubblegum-sans-regular.otf);
+}
+/* layout da página inicio*/
+body{
+	/*background-image: url(""); /* colocar uma imagem como fundo da tela*/
+	background-color: #dddddd;
+	/*background-image: url('https://g.twimg.com/Twitter_logo_blue.png');*/
+	color: rgba(0,0,0,0.9); /* r = red / g = green/ b = blue / a = alfa (mostra a tranparência)*/
+}
+p{
+	font-family: Arial, sans-serif;
+	text-align: justify;
+	text-indent: 50px;
+}
+/* layout da página fim*/
+/* cabeçalho inicio*/
+nav#menu {
+	display: block;
+}
+nav#menu ul {
+	list-style: none;
+	text-transform: uppercase;
+	position: absolute;
+	top: -20px;
+	left: 590px;
+}
+nav#menu li:hover {
+	background-color: #606060;
+}
+nav#menu li{
+	display: inline-block;
+	background-color: #dddddd;
+	padding: 10px;
+	margin: 2px;
+	-webkit-transition: background-color 1s;
+	-moz-transition: background-color 1s;
+	-moz-transition: background-color 1s;
+	transition-delay: background-color 1s;
+}
+nav#menu h1{
+	display: none;
+}
+nav#menu a{
+	text-decoration: none;
+	color: #000000;
+}
+nav#menu a:hover{
+	color: #FFFFFF;
+}
+
+div#interface {
+	background-color: #FAFAFA;
+	width: 1150px;
+	margin: -20px auto 100px auto;
+	padding: 10px;
+	box-shadow: 1px 1px 4px black;
+}
+header#cabecalho img#glass{
+	position: absolute;
+	left: 1043px;
+	top: 40px;
+}
+header#cabecalho{
+	border-bottom: 2px #606060 solid;
+	padding-bottom: 40px;
+	background: url("../imagens/glass-logo-peq(2).jpg") no-repeat 0px 65px;
+}
+header#cabecalho h1{
+	font-family: 'fontelogo', sans-serif;
+	font-size: 30px;
+	color: #606060;
+	text-shadow: 1px 1px 1px rgba(0,0,0,.6);
+	margin-bottom: 0px;
+}
+header#cabecalho h2{
+	font-family: 'Titillium Web', sans-serif;
+	color: #888888;
+	font-size: 15pt;
+	padding: 0px;
+	margin-top: 0px;
+}
+
+/* cabeçalho fim*/
+
+/* Inicio do corpo (section)*/
+header#cabecalho-artigo h1{
+	font-family: 'fontelogo', sans-serif;
+	font-size: 20px;
+	color: #606060;
+}
+header#cabecalho-artigo h3{
+	font-size: 13px;
+}
+#direita{
+	text-align: right;
+	font-size: 13px;
+}
+article#noticia-principal h2{
+	font-size: 13px;
+	color: #606060;
+	background-color: #dddddd;
+	padding: 5px 0px 5px 10px;
+	margin: 10px 0px 10px 0px;
+}
+header#cabecalho-artigo h2{
+	font-family: 'fontelogo', sans-serif;
+	font-size: 13px;
+	color: #cecece;
+	background-color: #fafafa;
+	margin: -20px 0px 5px -8px;
+}
+section#corpo{
+	display: block;
+	width: 610px;
+	float: left;
+	border-right: 2px solid #606060;
+	padding-right: 13px;
+}
+figure.foto-legenda{
+	position: relative;
+	border: 8px solid white;
+	box-shadow: 1px 1px 4px black; /* 1* = deslocamento horizontal, 2* deslocamento vertical, 3* espalhamento  */
+}
+figure.foto-legenda img {
+	width: 100%;
+	height: 100%;
+}
+figure.foto-legenda figcaption{
+	position: absolute;
+	background-color: rgba(0,0,0,.4);
+	opacity: 0;
+	top: 0px;
+	color: white;
+	width: 100%;
+	height: 100%;
+	padding: 10px;
+	box-sizing: border-box;
+}
+figure.foto-legenda:hover figcaption{
+	opacity: 1;
+}
+/* inicio tabela do corpo (section)*/
+table#tabelaspec{
+	border: 1px solid black;
+	border-spacing: 0px;
+	margin-left: auto;
+	margin-right: auto;
+}
+table#tabelaspec td{
+	padding: 10px;
+	border: 1px solid black;
+}
+table#tabelaspec td.ce{
+	color: #ffffff;
+	background-color: #606060;
+	font-weight: bold;
+}
+table#tabelaspec td.cd{
+	background-color: #cecece;
+
+}
+table#tabelaspec caption{
+	color: #888888;
+	font-size: 15px;
+	font-weight: bolder;
+}
+table#tabelaspec caption span{
+	display: block;
+	float: right;
+	color: 000000;
+	font-size: 10px;
+	margin-top: 5px;
+}
+/* fim tabela do corpo (section)*/
+
+/* fim do corpo (section)*/
+
+/* inicio do corpo (aside = lateral)*/
+aside#lateral{
+	margin-top: 10px;
+	margin-right: 5px;
+	display: block;
+	width: 485px;
+	float: right;
+	background-color: #dddddd;
+	padding: 10px;
+	box-shadow: 2px 2px 15px rgba(0,0,0,.5);
+	height: 900px;
+}
+aside#lateral h1{
+	font-family: 'fontelogo', sans-serif;
+	font-size: 25px;
+	color: #606060;
+	margin-top: -3px;
+}
+aside#lateral h2{
+	background-color: #606060;
+	font-size: 18px;
+	color: #ffffff;
+	padding: 5px;
+}
+/* fim do corpo (aside = lateral) */
+
+/* inicio do corpo (footer = rodape)*/
+footer#rodape{
+	clear: both;
+	border-top: 2px solid #606060;
+}
+footer#rodape h4{
+	text-align: center;
+}
+footer#rodape h4#h4{
+	margin-top: -20px;
+	text-align: center;
+}
+footer#rodape a{
+	text-decoration: none;
+}
